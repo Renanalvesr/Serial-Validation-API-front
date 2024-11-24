@@ -1,0 +1,17 @@
+<div>
+  <label for="trackingNumber">Tracking Number</label>
+  <input
+    id="trackingNumber"
+    [ngModel]="value"
+    (ngModelChange)="onChange($event)"
+    (blur)="onTouched()"
+  />
+
+  <!-- Validation Error Messages -->
+  <div *ngIf="control?.hasError('required') && control?.touched">
+    Tracking number is required.
+  </div>
+  <div *ngIf="control?.hasError('pattern') && control?.touched">
+    Invalid tracking number format (UUID).
+  </div>
+</div>

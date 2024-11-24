@@ -1,0 +1,27 @@
+<form [formGroup]="trackingForm" (ngSubmit)="onSubmit()">
+  <!-- Tracking Number Input -->
+  <app-tracking-input formControlName="trackingNumber"></app-tracking-input>
+
+  <button
+    type="submit"
+    [disabled]="trackingForm.invalid || loading"
+    class="validate-button"
+  >
+    <span *ngIf="loading" class="spinner-container">
+      <mat-spinner diameter="20" [strokeWidth]="2"></mat-spinner>
+    </span>
+    Validate
+  </button>
+</form>
+
+<!-- Loading Spinner -->
+<mat-spinner *ngIf="loading"></mat-spinner>
+
+<!-- Display Product Details -->
+<app-product-display *ngIf="product" [product]="product"></app-product-display>
+
+<!-- Error Message -->
+<app-error-message
+  *ngIf="errorMessage"
+  [message]="errorMessage"
+></app-error-message>

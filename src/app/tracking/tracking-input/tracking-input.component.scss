@@ -1,0 +1,44 @@
+/* Center the container for the label and input */
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Horizontally center */
+    justify-content: center; /* Vertically center */
+    margin: 20px 0; /* Optional: add spacing */
+  }
+  
+  /* Label styling */
+  label {
+    font-size: 16px;
+    margin-bottom: 8px; /* Spacing between label and input */
+    font-weight: bold;
+  }
+  
+  /* Input styling */
+  input {
+    padding: 8px;
+    width: 100%; /* Make input responsive */
+    max-width: 300px; /* Optional: limit max width */
+    margin-bottom: 12px; /* Spacing between input and error messages */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  /* Error message styling */
+  div.error-message {
+    color: #ff0000;
+    font-size: 12px;
+    margin-top: 4px;
+  }
+  
+  /* Error message for 'required' field */
+  div.error-message.required {
+    color: #d9534f; /* Optional: customize color for specific error */
+  }
+  
+  /* Error message for 'pattern' field */
+  div.error-message.pattern {
+    color: #f0ad4e; /* Optional: customize color for specific error */
+  }
+  

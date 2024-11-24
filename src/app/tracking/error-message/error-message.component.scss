@@ -1,0 +1,13 @@
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Horizontally center */
+    justify-content: center; /* Vertically center */
+  }
+  
+  .error-message div {
+    margin-bottom: 5px;
+  }
